@@ -4,7 +4,7 @@
 	<groupId>com.github.chrisbanes.photoview</groupId>
 	<artifactId>parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.2.1</version>
+	<version>1.2.1-CIAOPEOPLE</version>
 	<name>PhotoView Project</name>
 	<description>A simple ImageView that support zooming, both by Multi-touch gestures and double-tap.</description>
 	<url>https://github.com/chrisbanes/PhotoView</url>
@@ -90,5 +90,19 @@
 			</plugins>
 		</pluginManagement>
 		<sourceDirectory>src</sourceDirectory>
-	</build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh-external</artifactId>
+                <version>1.0-beta-6</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>mgmt-fanpage</id>
+            <url>scpexe://giallo@mgmt.fanpage.it/var/www/maven/inhouse</url>
+        </repository>
+    </distributionManagement>
 </project>

@@ -10,13 +10,14 @@
 	<parent>
 		<groupId>com.github.chrisbanes.photoview</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.2.1</version>
+		<version>1.2.1-CIAOPEOPLE</version>
 	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
